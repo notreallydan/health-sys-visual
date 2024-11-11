@@ -2,7 +2,7 @@ const HealthcareSystemVisualization = () => {
   return (
     <div className="w-full max-w-6xl mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6 text-center">Data Flows of the Australian Healthcare System</h1>
-      <svg className="w-full" viewBox="0 0 1200 800" aria-labelledby="healthcareSystemTitle healthcareSystemDesc">
+      <svg className="w-full" viewBox="-200 0 1600 800" aria-labelledby="healthcareSystemTitle healthcareSystemDesc">
         <title id="healthcareSystemTitle">Australian Healthcare System Visualization</title>
         <desc id="healthcareSystemDesc">A 5-layer model visualizing the structure and flows within the Australian healthcare system</desc>
         
@@ -127,12 +127,50 @@ const HealthcareSystemVisualization = () => {
           <path d="M100,170 L70,170 L70,90 L100,90" stroke="black" strokeWidth="2" fill="none" />
           <path d="M95,85 L100,90 L95,95" fill="none" stroke="black" strokeWidth="2" />
 
+          {/* Data flow list between Layer 5 and 4 */}
+          <g transform="translate(1140, 90)">
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="15">• Performance Requirements Data</tspan>
+              <tspan x="5" y="35">• Authorization Data</tspan>
+              <tspan x="5" y="55">• System Configuration Data</tspan>
+              <tspan x="5" y="75">• Alert & Update Data</tspan>
+            </text>
+          </g>
+
+          {/* Data flow list between Layer 4 and 5 */}
+          <g transform="translate(-120, 90)">
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="15">• Transaction Data</tspan>
+              <tspan x="5" y="35">• Performance Analytics</tspan>
+              <tspan x="5" y="55">• Compliance Data</tspan>
+              <tspan x="5" y="75">• Forecasting Data</tspan>
+            </text>
+          </g>
+
           {/* Layer 4 to 3 */}
           <path d="M1100,230 L1130,230 L1130,310 L1100,310" stroke="black" strokeWidth="2" fill="none" />
           <path d="M1105,305 L1100,310 L1105,315" fill="none" stroke="black" strokeWidth="2" />
           
           <path d="M100,310 L70,310 L70,230 L100,230" stroke="black" strokeWidth="2" fill="none" />
           <path d="M95,225 L100,230 L95,235" fill="none" stroke="black" strokeWidth="2" />
+
+          {/* Data flow list between Layer 4 and 3 */}
+          <g transform="translate(1140, 230)">
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="15">• Resource Allocation Data</tspan>
+              <tspan x="5" y="35">• Transaction Parameters</tspan>
+              <tspan x="5" y="55">• Program Data</tspan>
+            </text>
+          </g>
+
+          {/* Data flow list between Layer 3 and 4 */}
+          <g transform="translate(-120, 230)">
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="15">• Service Utilization Data</tspan>
+              <tspan x="5" y="35">• Financial Performance Data</tspan>
+              <tspan x="5" y="55">• Demand Data</tspan>
+            </text>
+          </g>
 
           {/* Layer 3 to 2 */}
           <path d="M1100,370 L1130,370 L1130,450 L1100,450" stroke="black" strokeWidth="2" fill="none" />
@@ -141,6 +179,24 @@ const HealthcareSystemVisualization = () => {
           <path d="M100,450 L70,450 L70,370 L100,370" stroke="black" strokeWidth="2" fill="none" />
           <path d="M95,365 L100,370 L95,375" fill="none" stroke="black" strokeWidth="2" />
 
+          {/* Data flow list between Layer 3 and 2 */}
+          <g transform="translate(1140, 370)">
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="15">• Service Coordination Data</tspan>
+              <tspan x="5" y="35">• Clinical Systems Data</tspan>
+              <tspan x="5" y="55">• Operational Data</tspan>
+            </text>
+          </g>
+
+          {/* Data flow list between Layer 2 and 3 */}
+          <g transform="translate(-120, 370)">
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="15">• Clinical Activity Data</tspan>
+              <tspan x="5" y="35">• Resource Usage Data</tspan>
+              <tspan x="5" y="55">• Integration Data</tspan>
+            </text>
+          </g>
+
           {/* Layer 2 to 1 */}
           <path d="M1100,550 L1130,550 L1130,630 L1100,630" stroke="black" strokeWidth="2" fill="none" />
           <path d="M1105,625 L1100,630 L1105,635" fill="none" stroke="black" strokeWidth="2" />
@@ -148,6 +204,24 @@ const HealthcareSystemVisualization = () => {
           <path d="M100,630 L70,630 L70,550 L100,550" stroke="black" strokeWidth="2" fill="none" />
           <path d="M95,545 L100,550 L95,555" fill="none" stroke="black" strokeWidth="2" />
         </g>
+
+          {/* Data flow list between Layer 2 and 1 */}
+          <g transform="translate(1140, 550)">
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="15">• Service Performance Data</tspan>
+              <tspan x="5" y="35">• System Requirements Data</tspan>
+              <tspan x="5" y="55">• Research & Quality Data</tspan>
+            </text>
+          </g>
+
+          {/* Data flow list between Layer 1 and 2 */}
+          <g transform="translate(-120, 550)">
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="15">• Infrastructure Data</tspan>
+              <tspan x="5" y="35">• Knowledge Base Data</tspan>
+              <tspan x="5" y="55">• System Support Data</tspan>
+            </text>
+          </g>
 
         {/* Legend */}
         <g transform="translate(100, 740)">
