@@ -1,8 +1,8 @@
 const HealthcareSystemVisualization = () => {
   return (
     <div className="w-full max-w-6xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Data Flows of the Australian Healthcare System</h1>
-      <svg className="w-full" viewBox="-200 0 1600 800" aria-labelledby="healthcareSystemTitle healthcareSystemDesc">
+      <h1 className="text-2xl font-bold mb-6 text-center">Data Flows of the Australian Healthcare System</h1>
+      <svg className="w-full h-auto" viewBox="-200 0 1850 800" aria-labelledby="healthcareSystemTitle healthcareSystemDesc">
         <title id="healthcareSystemTitle">Australian Healthcare System Visualization</title>
         <desc id="healthcareSystemDesc">A 5-layer model visualizing the structure and flows within the Australian healthcare system</desc>
         
@@ -120,6 +120,50 @@ const HealthcareSystemVisualization = () => {
 
         {/* Connections between layers */}
         <g className="flows">
+          {/* Layer 5 to 1 */}
+          <path d="M1100,40 L1400,40 L1400,680 L1100,680" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M1105,35 L1100,40 L1105,45" fill="none" stroke="black" strokeWidth="2" />
+          <path d="M1105,675 L1100,680 L1105,685" fill="none" stroke="black" strokeWidth="2" />
+
+          {/* Data flow list between Layer 5 and 1 */}
+          <g transform="translate(1410, 150)">
+            <text className="text-s fill-gray-800">
+              <tspan x="5" y="5">My Health Record</tspan>
+            </text> 
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="30">• Primary Data Sources</tspan>
+              <tspan x="5" y="50">• Primary Data Consumers</tspan>
+            </text>
+            <text className="text-s fill-gray-800">
+              <tspan x="5" y="90">Healthcare Identifiers</tspan>
+            </text> 
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="115">• Distribution Network</tspan>
+              <tspan x="5" y="135">• Verification Points</tspan>
+            </text>
+            <text className="text-s fill-gray-800">
+              <tspan x="5" y="175">Secure Messaging</tspan>
+            </text> 
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="200">• Primary Communication Paths</tspan>
+            </text>
+            <text className="text-s fill-gray-800">
+              <tspan x="5" y="240">Electronic Prescriptions</tspan>
+            </text> 
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="265">• Prescriber Outputs</tspan>
+              <tspan x="5" y="285">• Pharmacy Outputs</tspan>
+              <tspan x="5" y="305">• PBS System Outputs</tspan>
+            </text>
+            <text className="text-s fill-gray-800">
+              <tspan x="5" y="345">Telehealth Systems</tspan>
+            </text>
+            <text className="text-xs fill-gray-800">
+              <tspan x="5" y="370">• Provider platforms to patient endpoints</tspan>
+              <tspan x="5" y="390">• Data Integration</tspan>
+            </text>
+          </g>
+
           {/* Layer 5 to 4 */}
           <path d="M1100,90 L1130,90 L1130,170 L1100,170" stroke="black" strokeWidth="2" fill="none" />
           <path d="M1105,165 L1100,170 L1105,175" fill="none" stroke="black" strokeWidth="2" />
@@ -224,7 +268,7 @@ const HealthcareSystemVisualization = () => {
           </g>
 
         {/* Legend */}
-        <g transform="translate(100, 740)">
+        <g transform="translate(100, 745)">
           <text x="0" y="0" className="text-sm font-bold">Legend:</text>
           <path d="M0,10 L30,10" stroke="black" strokeWidth="2" />
           <path d="M25,5 L30,10 L25,15" fill="none" stroke="black" strokeWidth="2" />
