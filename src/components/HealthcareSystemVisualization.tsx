@@ -1,146 +1,164 @@
-export default function HealthcareSystemVisualization() {
+const HealthcareSystemVisualization = () => {
   return (
     <div className="w-full max-w-6xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Australian Healthcare System</h1>
-      <svg className="w-full" viewBox="0 0 1000 800" aria-labelledby="healthcareSystemTitle healthcareSystemDesc">
+      <h1 className="text-3xl font-bold mb-6 text-center">Data Flows of the Australian Healthcare System</h1>
+      <svg className="w-full" viewBox="0 0 1200 800" aria-labelledby="healthcareSystemTitle healthcareSystemDesc">
         <title id="healthcareSystemTitle">Australian Healthcare System Visualization</title>
         <desc id="healthcareSystemDesc">A 5-layer model visualizing the structure and flows within the Australian healthcare system</desc>
         
         {/* Layer 5: Governance */}
         <g transform="translate(0, 0)">
-          <rect x="0" y="0" width="1000" height="120" fill="#e3f2fd" stroke="#2196f3" strokeWidth="2" />
-          <text x="10" y="30" className="text-xl font-bold fill-blue-800">Layer 5: Governance</text>
-          <rect x="20" y="40" width="180" height="60" fill="#bbdefb" stroke="#1e88e5" strokeWidth="1" />
-          <text x="30" y="70" className="text-sm fill-blue-900">Federal Government</text>
-          <rect x="210" y="40" width="180" height="60" fill="#bbdefb" stroke="#1e88e5" strokeWidth="1" />
-          <text x="220" y="70" className="text-sm fill-blue-900">State/Territory Governments</text>
-          <rect x="400" y="40" width="180" height="60" fill="#bbdefb" stroke="#1e88e5" strokeWidth="1" />
-          <text x="410" y="70" className="text-sm fill-blue-900">Local Governments</text>
-          <rect x="590" y="40" width="180" height="60" fill="#bbdefb" stroke="#1e88e5" strokeWidth="1" />
-          <text x="600" y="70" className="text-sm fill-blue-900">Regulatory Bodies</text>
-          <rect x="780" y="40" width="200" height="60" fill="#bbdefb" stroke="#1e88e5" strokeWidth="1" />
-          <text x="790" y="70" className="text-sm fill-blue-900">Health Ministers' Meeting</text>
+          <rect x="100" y="0" width="1000" height="120" fill="#e3f2fd" stroke="#2196f3" strokeWidth="2" />
+          <text x="110" y="30" className="text-xl font-bold fill-blue-800">Layer 5: Governance</text>
+          
+          <rect x="120" y="40" width="180" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="130" y="75" className="text-sm fill-blue-900">Federal Government</text>
+          
+          <rect x="310" y="40" width="180" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="320" y="65" className="text-sm fill-blue-900">
+           <tspan x="320" dy="0">State/Territory</tspan>
+           <tspan x="320" dy="16">Governments</tspan>
+          </text>
+          
+          <rect x="500" y="40" width="180" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="510" y="75" className="text-sm fill-blue-900">Local Governments</text>
+          
+          <rect x="690" y="40" width="180" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="700" y="75" className="text-sm fill-blue-900">Regulatory Bodies</text>
+          
+          <rect x="880" y="40" width="200" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="890" y="75" className="text-sm fill-blue-900">Health Ministers' Meeting</text>
         </g>
 
         {/* Layer 4: Funding Streams */}
         <g transform="translate(0, 140)">
-          <rect x="0" y="0" width="1000" height="120" fill="#e8f5e9" stroke="#4caf50" strokeWidth="2" />
-          <text x="10" y="30" className="text-xl font-bold fill-green-800">Layer 4: Funding Streams</text>
-          <rect x="20" y="40" width="150" height="60" fill="#c8e6c9" stroke="#43a047" strokeWidth="1" />
-          <text x="30" y="70" className="text-sm fill-green-900">Medicare</text>
-          <rect x="180" y="40" width="150" height="60" fill="#c8e6c9" stroke="#43a047" strokeWidth="1" />
-          <text x="190" y="70" className="text-sm fill-green-900">PBS</text>
-          <rect x="340" y="40" width="150" height="60" fill="#c8e6c9" stroke="#43a047" strokeWidth="1" />
-          <text x="350" y="70" className="text-sm fill-green-900">Private Health Insurance</text>
-          <rect x="500" y="40" width="150" height="60" fill="#c8e6c9" stroke="#43a047" strokeWidth="1" />
-          <text x="510" y="70" className="text-sm fill-green-900">Out-of-pocket</text>
-          <rect x="660" y="40" width="150" height="60" fill="#c8e6c9" stroke="#43a047" strokeWidth="1" />
-          <text x="670" y="70" className="text-sm fill-green-900">State/Territory funding</text>
-          <rect x="820" y="40" width="160" height="60" fill="#c8e6c9" stroke="#43a047" strokeWidth="1" />
-          <text x="830" y="70" className="text-sm fill-green-900">Federal funding programs</text>
+          <rect x="100" y="0" width="1000" height="120" fill="#e8f5e9" stroke="#4caf50" strokeWidth="2" />
+          <text x="110" y="30" className="text-xl font-bold fill-green-800">Layer 4: Funding Streams</text>
+          
+          <rect x="120" y="40" width="150" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="130" y="75" className="text-sm fill-green-900">Medicare</text>
+          
+          <rect x="280" y="40" width="150" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="290" y="75" className="text-sm fill-green-900">PBS</text>
+          
+          <rect x="440" y="40" width="150" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="450" y="65" className="text-sm fill-green-900">
+           <tspan x="450" dy="0">Private Health</tspan>
+           <tspan x="450" dy="16">Insurance</tspan>
+          </text>
+          
+          <rect x="600" y="40" width="150" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="610" y="75" className="text-sm fill-green-900">Out-of-pocket</text>
+          
+          <rect x="760" y="40" width="150" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="770" y="65" className="text-sm fill-green-900">
+           <tspan x="770" dy="0">State/Territory</tspan>
+           <tspan x="770" dy="16">funding</tspan>
+          </text>
+          
+          <rect x="920" y="40" width="160" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="930" y="65" className="text-sm fill-green-900">
+           <tspan x="930" dy="0">Federal funding</tspan>
+           <tspan x="930" dy="16">programs</tspan>
+          </text>
         </g>
 
         {/* Layer 3: Service Coordination */}
         <g transform="translate(0, 280)">
-          <rect x="0" y="0" width="1000" height="120" fill="#f3e5f5" stroke="#9c27b0" strokeWidth="2" />
-          <text x="10" y="30" className="text-xl font-bold fill-purple-800">Layer 3: Service Coordination</text>
-          <rect x="20" y="40" width="230" height="60" fill="#e1bee7" stroke="#8e24aa" strokeWidth="1" />
-          <text x="30" y="70" className="text-sm fill-purple-900">Primary Health Networks</text>
-          <rect x="260" y="40" width="230" height="60" fill="#e1bee7" stroke="#8e24aa" strokeWidth="1" />
-          <text x="270" y="70" className="text-sm fill-purple-900">Healthcare Networks</text>
-          <rect x="500" y="40" width="230" height="60" fill="#e1bee7" stroke="#8e24aa" strokeWidth="1" />
-          <text x="510" y="70" className="text-sm fill-purple-900">Professional Bodies</text>
-          <rect x="740" y="40" width="240" height="60" fill="#e1bee7" stroke="#8e24aa" strokeWidth="1" />
-          <text x="750" y="70" className="text-sm fill-purple-900">Digital Health Infrastructure</text>
+          <rect x="100" y="0" width="1000" height="120" fill="#f3e5f5" stroke="#9c27b0" strokeWidth="2" />
+          <text x="110" y="30" className="text-xl font-bold fill-purple-800">Layer 3: Service Coordination</text>
+          
+          <rect x="120" y="40" width="230" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="130" y="75" className="text-sm fill-purple-900">Primary Health Networks</text>
+          
+          <rect x="360" y="40" width="230" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="370" y="75" className="text-sm fill-purple-900">Healthcare Networks</text>
+          
+          <rect x="600" y="40" width="230" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="610" y="75" className="text-sm fill-purple-900">Professional Bodies</text>
+          
+          <rect x="840" y="40" width="240" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="850" y="75" className="text-sm fill-purple-900">Digital Health Infrastructure</text>
         </g>
 
         {/* Layer 2: Service Delivery */}
         <g transform="translate(0, 420)">
-          <rect x="0" y="0" width="1000" height="180" fill="#e8eaf6" stroke="#3f51b5" strokeWidth="2" />
-          <text x="10" y="30" className="text-xl font-bold fill-indigo-800">Layer 2: Service Delivery</text>
-          <rect x="20" y="40" width="310" height="120" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
-          <text x="30" y="70" className="text-sm font-semibold fill-indigo-900">Primary Care</text>
-          <text x="30" y="90" className="text-xs fill-indigo-900">GPs, Community Health, Allied Health</text>
-          <rect x="340" y="40" width="310" height="120" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
-          <text x="350" y="70" className="text-sm font-semibold fill-indigo-900">Secondary/Specialist Care</text>
-          <text x="350" y="90" className="text-xs fill-indigo-900">Specialists, Diagnostic Services</text>
-          <rect x="660" y="40" width="320" height="120" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
-          <text x="670" y="70" className="text-sm font-semibold fill-indigo-900">Tertiary/Hospital Care</text>
-          <text x="670" y="90" className="text-xs fill-indigo-900">Public Hospitals, Private Hospitals</text>
+          <rect x="100" y="0" width="1000" height="160" fill="#e8eaf6" stroke="#3f51b5" strokeWidth="2" />
+          <text x="110" y="30" className="text-xl font-bold fill-indigo-800">Layer 2: Service Delivery</text>
+          
+          {/* Three columns */}
+          <rect x="120" y="50" width="310" height="90" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="130" y="80" className="text-sm font-semibold fill-indigo-900">Primary Care</text>
+          <text x="130" y="100" className="text-xs fill-indigo-900">GPs, Community Health, Allied Health</text>
+          
+          <rect x="445" y="50" width="310" height="90" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="455" y="80" className="text-sm font-semibold fill-indigo-900">Secondary/Specialist Care</text>
+          <text x="455" y="100" className="text-xs fill-indigo-900">Specialists, Diagnostic Services</text>
+          
+          <rect x="770" y="50" width="310" height="90" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="780" y="80" className="text-sm font-semibold fill-indigo-900">Tertiary/Hospital Care</text>
+          <text x="780" y="100" className="text-xs fill-indigo-900">Public Hospitals, Private Hospitals</text>
         </g>
 
         {/* Layer 1: Support Systems */}
-        <g transform="translate(0, 620)">
-          <rect x="0" y="0" width="1000" height="120" fill="#eceff1" stroke="#607d8b" strokeWidth="2" />
-          <text x="10" y="30" className="text-xl font-bold fill-gray-800">Layer 1: Support Systems</text>
-          <rect x="20" y="40" width="230" height="60" fill="#cfd8dc" stroke="#546e7a" strokeWidth="1" />
-          <text x="30" y="70" className="text-sm fill-gray-900">Education/Training</text>
-          <rect x="260" y="40" width="230" height="60" fill="#cfd8dc" stroke="#546e7a" strokeWidth="1" />
-          <text x="270" y="70" className="text-sm fill-gray-900">Research</text>
-          <rect x="500" y="40" width="230" height="60" fill="#cfd8dc" stroke="#546e7a" strokeWidth="1" />
-          <text x="510" y="70" className="text-sm fill-gray-900">Data Systems</text>
-          <rect x="740" y="40" width="240" height="60" fill="#cfd8dc" stroke="#546e7a" strokeWidth="1" />
-          <text x="750" y="70" className="text-sm fill-gray-900">Quality Assurance</text>
+        <g transform="translate(0, 600)">
+          <rect x="100" y="0" width="1000" height="120" fill="#eceff1" stroke="#607d8b" strokeWidth="2" />
+          <text x="110" y="30" className="text-xl font-bold fill-gray-800">Layer 1: Support Systems</text>
+          
+          <rect x="120" y="40" width="230" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="130" y="75" className="text-sm fill-gray-900">Education/Training</text>
+          
+          <rect x="360" y="40" width="230" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="370" y="75" className="text-sm fill-gray-900">Research</text>
+          
+          <rect x="600" y="40" width="230" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="610" y="75" className="text-sm fill-gray-900">Data Systems</text>
+          
+          <rect x="840" y="40" width="240" height="60" fill="#c5cae9" stroke="#3949ab" strokeWidth="1" />
+          <text x="850" y="75" className="text-sm fill-gray-900">Quality Assurance</text>
         </g>
 
-        {/* Flows */}
+        {/* Connections between layers */}
         <g className="flows">
-          {/* Funding Flows */}
-          <path d="M110,100 L95,140" fill="none" stroke="#4caf50" strokeWidth="2" markerEnd="url(#greenArrow)" />
-          <path d="M300,100 L255,140" fill="none" stroke="#4caf50" strokeWidth="2" markerEnd="url(#greenArrow)" />
-          <path d="M900,100 L900,140" fill="none" stroke="#4caf50" strokeWidth="2" markerEnd="url(#greenArrow)" />
-          <path d="M95,200 L95,420" fill="none" stroke="#4caf50" strokeWidth="2" markerEnd="url(#greenArrow)" />
-          <path d="M255,200 L255,420" fill="none" stroke="#4caf50" strokeWidth="2" markerEnd="url(#greenArrow)" />
-          <path d="M415,200 L415,420" fill="none" stroke="#4caf50" strokeWidth="2" markerEnd="url(#greenArrow)" />
-          <path d="M575,200 L820,420" fill="none" stroke="#4caf50" strokeWidth="2" markerEnd="url(#greenArrow)" />
+          {/* Layer 5 to 4 */}
+          <path d="M1100,90 L1130,90 L1130,170 L1100,170" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M1105,165 L1100,170 L1105,175" fill="none" stroke="black" strokeWidth="2" />
+          
+          <path d="M100,170 L70,170 L70,90 L100,90" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M95,85 L100,90 L95,95" fill="none" stroke="black" strokeWidth="2" />
 
-          {/* Governance Flows */}
-          <path d="M980,100 L980,680" fill="none" stroke="#9c27b0" strokeWidth="2" strokeDasharray="10,5" markerEnd="url(#purpleArrow)" />
-          <path d="M680,100 L680,280" fill="none" stroke="#9c27b0" strokeWidth="2" strokeDasharray="10,5" markerEnd="url(#purpleArrow)" />
-          <path d="M375,280 L375,100" fill="none" stroke="#9c27b0" strokeWidth="2" strokeDasharray="10,5" markerEnd="url(#purpleArrow)" />
-          <path d="M860,680 L860,100" fill="none" stroke="#9c27b0" strokeWidth="2" strokeDasharray="10,5" markerEnd="url(#purpleArrow)" />
+          {/* Layer 4 to 3 */}
+          <path d="M1100,230 L1130,230 L1130,310 L1100,310" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M1105,305 L1100,310 L1105,315" fill="none" stroke="black" strokeWidth="2" />
+          
+          <path d="M100,310 L70,310 L70,230 L100,230" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M95,225 L100,230 L95,235" fill="none" stroke="black" strokeWidth="2" />
 
-          {/* Patient Flows */}
-          <path d="M330,500 L340,500" fill="none" stroke="#f44336" strokeWidth="2" markerEnd="url(#redArrow)" />
-          <path d="M650,500 L660,500" fill="none" stroke="#f44336" strokeWidth="2" markerEnd="url(#redArrow)" />
-          <path d="M135,460 Q135,340 250,340" fill="none" stroke="#f44336" strokeWidth="2" markerEnd="url(#redArrow)" />
+          {/* Layer 3 to 2 */}
+          <path d="M1100,370 L1130,370 L1130,450 L1100,450" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M1105,445 L1100,450 L1105,455" fill="none" stroke="black" strokeWidth="2" />
+          
+          <path d="M100,450 L70,450 L70,370 L100,370" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M95,365 L100,370 L95,375" fill="none" stroke="black" strokeWidth="2" />
 
-          {/* Information Flows */}
-          <path d="M860,340 L860,420" fill="none" stroke="#2196f3" strokeWidth="2" strokeDasharray="5,5" markerEnd="url(#blueArrow)" />
-          <path d="M860,420 L860,340" fill="none" stroke="#2196f3" strokeWidth="2" strokeDasharray="5,5" markerEnd="url(#blueArrow)" />
-          <path d="M615,680 L615,600" fill="none" stroke="#2196f3" strokeWidth="2" strokeDasharray="5,5" markerEnd="url(#blueArrow)" />
-          <path d="M615,600 L615,680" fill="none" stroke="#2196f3" strokeWidth="2" strokeDasharray="5,5" markerEnd="url(#blueArrow)" />
+          {/* Layer 2 to 1 */}
+          <path d="M1100,550 L1130,550 L1130,630 L1100,630" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M1105,625 L1100,630 L1105,635" fill="none" stroke="black" strokeWidth="2" />
+          
+          <path d="M100,630 L70,630 L70,550 L100,550" stroke="black" strokeWidth="2" fill="none" />
+          <path d="M95,545 L100,550 L95,555" fill="none" stroke="black" strokeWidth="2" />
         </g>
-
-        {/* Arrowhead markers */}
-        <defs>
-          <marker id="greenArrow" markerWidth="6" markerHeight="4" refX="0" refY="2" orient="auto">
-            <polygon points="0 0, 6 2, 0 4" fill="#4caf50" />
-          </marker>
-          <marker id="purpleArrow" markerWidth="6" markerHeight="4" refX="0" refY="2" orient="auto">
-            <polygon points="0 0, 6 2, 0 4" fill="#9c27b0" />
-          </marker>
-          <marker id="redArrow" markerWidth="6" markerHeight="4" refX="0" refY="2" orient="auto">
-            <polygon points="0 0, 6 2, 0 4" fill="#f44336" />
-          </marker>
-          <marker id="blueArrow" markerWidth="6" markerHeight="4" refX="0" refY="2" orient="auto">
-            <polygon points="0 0, 6 2, 0 4" fill="#2196f3" />
-          </marker>
-        </defs>
 
         {/* Legend */}
-        <g transform="translate(20, 760)">
+        <g transform="translate(100, 740)">
           <text x="0" y="0" className="text-sm font-bold">Legend:</text>
-          <rect x="0" y="10" width="20" height="10" fill="#4caf50" />
-          <text x="25" y="20" className="text-xs">Funding Flow</text>
-          <rect x="120" y="10" width="20" height="10" fill="#9c27b0" />
-          <text x="145" y="20" className="text-xs">Governance Flow</text>
-          <rect x="260" y="10" width="20" height="10" fill="#f44336" />
-          <text x="285" y="20" className="text-xs">Patient Flow</text>
-          <rect x="380" y="10" width="20" height="10" fill="#2196f3" />
-          <text x="405" y="20" className="text-xs">Information Flow</text>
+          <path d="M0,10 L30,10" stroke="black" strokeWidth="2" />
+          <path d="M25,5 L30,10 L25,15" fill="none" stroke="black" strokeWidth="2" />
+          <text x="40" y="15" className="text-xs">Data Flow</text>
         </g>
       </svg>
     </div>
-  )
-}
+  );
+};
+
+export default HealthcareSystemVisualization;
